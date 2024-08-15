@@ -1,8 +1,8 @@
 import React from 'react';
 
-const About = () => {
+const About = ({ isDaylightMode }) => {
   return (
-    <div name='about' className='w-full h-screen bg-[#0a192f] text-gray-300'>
+    <div name='about' className={`w-full lg:h-screen h-70% ${isDaylightMode ? 'bg-gray-100' : 'bg-[#0a192f]'} text-[#8892b0]`}>
       <div className='flex flex-col justify-center items-center w-full h-full'>
         <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
           <div className='sm:text-right pb-8 pl-4'>
@@ -14,7 +14,7 @@ const About = () => {
           </div>
           <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
             <div className='sm:text-right text-4xl font-bold'>
-              <p>Hi. I'm Sai Kumar, nice to meet you. Please take a look around.</p>
+              <p>Hi. I'm Josiah Monday, nice to meet you. Please take a look around.</p>
             </div>
             <div>
               <p>I am passionate about building excellent software that improves

@@ -9,19 +9,21 @@ import {
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import Logo from '../assets/logo.png';
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import Logo from '../assets/pic.jpg';
 import { Link } from 'react-scroll';
 
-const Navbar = () => {
+const Navbar = ({ toggleDaylightMode, isDaylightMode }) => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
-  return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
-      <div>
-        <img src={Logo} alt='Logo Image' style={{ width: '200px' }} />
-      </div>
 
+  return (
+    <div className={`w-full h-16 flex items-center justify-between px-4 ${isDaylightMode ? 'bg-gray-100 text-black' : 'bg-[#0a192f] text-gray-300'}`}>
+      <div className='mt-[40px]'>
+        <img src={Logo} alt='Logo Image' className='lg:w-[120px] lg:h-[100px] h-[80px] rounded-full' />
+      </div>
+      <BsFillMoonStarsFill onClick={toggleDaylightMode} className='cursor-pointer ml-[-50px] lg:ml-0' />
       {/* menu */}
       <ul className='hidden md:flex'>
         <li>
@@ -101,7 +103,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='https://www.linkedin.com/in/josiah-monday/'
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -109,7 +111,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='https://github.com/Josiahmonday'
             >
               Github <FaGithub size={30} />
             </a>
@@ -117,7 +119,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='mailto:josiahmonday007@gmail.com'
             >
               Email <HiOutlineMail size={30} />
             </a>

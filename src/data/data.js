@@ -1,34 +1,53 @@
 import WorkIm from '../assets/projects/workImg.jpeg'
-import RealEst from '../assets/projects/realestate.jpg'
+import Adf from '../assets/projects/adf.png'
+import Eduguide from '../assets/projects/eduguide.png'
+import Rib from '../assets/projects/rib.png'
+import Kdt from '../assets/projects/kdt.png'
+import Carepal from '../assets/projects/carepal.png'
+import Todos from '../assets/projects/todos.png'
 
 export const data=[
     {
         id:1,
-        name:"React JS Application",
-        image:WorkIm,
+        name:"CarePal React App",
+        image:Carepal,
         github:"",
-        live:"",
+        live:"https://carepal-online.vercel.app",
     },
     {
         id:2,
-        name:"React JS Application",
-        image:RealEst,
+        name:"EduGuide React App",
+        image:Eduguide,
         github:"",
-        live:"",
+        live:"https://eduguideonline.netlify.app/",
     },
     {
         id:3,
-        name:"React JS Application",
-        image:WorkIm,
+        name:"ADF NGO Website",
+        image:Adf,
         github:"",
-        live:"",
+        live:"https://adfngo.netlify.app/",
     },
     {
         id:4,
-        name:"React JS Application",
-        image:RealEst,
+        name:"Kuramo NGO Website",
+        image:Kdt,
         github:"",
-        live:"",
+        live:"https://kuramo.org/",
+    },
+    {
+        id:5,
+        name:"Retail Banking React App",
+        image:Rib,
+        github:"",
+        live:"https://retailbankingtemp.netlify.app/",
+    },
+    {
+        id:6,
+        name:"Todos React App",
+        image:Todos,
+        github:"https://github.com/Josiahmonday/Dynamic-TodosApp",
+        live:"https://dynamic-todosapp.netlify.app/",
     },
 
 
